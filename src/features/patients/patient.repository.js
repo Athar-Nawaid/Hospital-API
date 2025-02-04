@@ -32,12 +32,14 @@ export default class PatientRepository{
                 date:date
             });
 
+            console.log('new report', newReport);
             await newReport.save();
+
 
             await patientModel.updateOne(
                 {_id:id},
                 {$push:{
-                    reports:newReport
+                    reports:newReport._id
                 }
             });
     

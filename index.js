@@ -18,7 +18,7 @@ server.use('/reports',jwtAuth,patientRouter)
 
 
 server.get('/',(req,res)=>{
-    res.send('Landing Page')
+    res.send('Landing Page for Hospital API -It doesnot have any front end. Kindly hit api with postman')
 })
 
 server.listen(process.env.PORT|| 3000,()=>{
