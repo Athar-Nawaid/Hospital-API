@@ -32,7 +32,8 @@ export default class PatientRepository{
                 date:date
             });
 
-            let patient = await patientModel.findById(id);
+            await newReport.save();
+
             await patientModel.updateOne(
                 {_id:id},
                 {$push:{
@@ -40,7 +41,7 @@ export default class PatientRepository{
                 }
             });
     
-            return await newReport.save();
+            return newReport;
         }catch(err){
             console.log(err);
         }

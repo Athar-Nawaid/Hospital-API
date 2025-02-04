@@ -4,7 +4,6 @@ let reportSchema = mongoose.Schema({
     patient:{
         type:mongoose.Schema.Types.ObjectId,
         ref:'Patient',
-        unique:true,
         required:true
     },
     doctor:{
