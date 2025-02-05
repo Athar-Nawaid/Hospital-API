@@ -14,7 +14,7 @@ server.use(express.json());
 
 server.use('/doctors',doctorRouter);
 server.use('/patients',jwtAuth,patientRouter);
-server.use('/reports',jwtAuth,patientRouter)
+server.use('/reports',jwtAuth,patientRouter);
 
 
 server.get('/',(req,res)=>{
@@ -24,4 +24,4 @@ server.get('/',(req,res)=>{
 server.listen(process.env.PORT|| 3000,()=>{
     console.log('server is listening at 3000');
     connectToMongoose();
-})
+});
